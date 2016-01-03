@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B4884A77-884E-4669-976B-19E414F4F8AC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BioConnect.DataObjects.Mapping</RootNamespace>
+    <AssemblyName>BioConnect.DataObjects.Mapping</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Entertech.BiometricService\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReaderObjectMapping.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BioConnect.DataObjects\BioConnect.DataObjects.csproj">
+      <Project>{524a322e-0309-4362-a2a4-eecb44642b19}</Project>
+      <Name>BioConnect.DataObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CustomProtocol Method\QuickStart\CustomProtocol\Entertech.BioStar.DeviceServer.csproj">
+      <Project>{fb261628-26fd-48b5-9d3d-c9e34b4728cf}</Project>
+      <Name>Entertech.BioStar.DeviceServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entertech.BiometricService.Mobile.Entities\Entertech.BiometricService.Mobile.Entities.csproj">
+      <Project>{1314c7bb-72e0-4111-81ba-8f8efa89ccf4}</Project>
+      <Name>Entertech.BiometricService.Mobile.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entertech.DataAccess\Entertech.DataAccess.csproj">
+      <Project>{2cb138f5-8b3d-40c9-bb2c-033fbb81b251}</Project>
+      <Name>Entertech.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entertech.Devices.Core\Entertech.Devices.Core.csproj">
+      <Project>{f57936a0-acfb-4f12-923c-b93912563ea3}</Project>
+      <Name>Entertech.Devices.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entertech.Devices.Entities\Entertech.Devices.Entities.csproj">
+      <Project>{32847043-d510-4be0-be59-460a53fa9d78}</Project>
+      <Name>Entertech.Devices.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entertech.Entities\Entertech.BiometricService.Entities.csproj">
+      <Project>{0ca3647a-5a03-494b-94df-a86b5dcdea6e}</Project>
+      <Name>Entertech.BiometricService.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

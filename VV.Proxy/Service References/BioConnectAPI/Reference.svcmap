@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b09298f2-6505-42dc-baf6-2ac8dc3534bb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://127.0.0.1:8180/BioConnectAPI/service/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="www.BioConnect.com.wsdl" MetadataType="Wsdl" ID="66773300-e2b2-4a20-8710-02661c6e4e6d" SourceId="1" SourceUrl="http://127.0.0.1:8180/BioConnectAPI/service/mex" />
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="dba25a1c-a484-49ce-bf65-9eb331dc7e3b" SourceId="1" SourceUrl="http://127.0.0.1:8180/BioConnectAPI/service/mex" />
+    <MetadataFile FileName="www.BioConnect.com.xsd" MetadataType="Schema" ID="37b07038-b594-487e-8c1a-867dc3d73048" SourceId="1" SourceUrl="http://127.0.0.1:8180/BioConnectAPI/service/mex" />
+    <MetadataFile FileName="service15.xsd" MetadataType="Schema" ID="3c1ecb29-1f51-410f-bf97-9c8752c86e6a" SourceId="1" SourceUrl="http://127.0.0.1:8180/BioConnectAPI/service/mex" />
+    <MetadataFile FileName="Entertech.BiometricService.Api1.xsd" MetadataType="Schema" ID="c0595f58-126f-4f83-a40a-f526eb0a5550" SourceId="1" SourceUrl="http://127.0.0.1:8180/BioConnectAPI/service/mex" />
+    <MetadataFile FileName="BioConnect.DataObjects.xsd" MetadataType="Schema" ID="78bb75f2-10fb-4dd7-8f05-550d12531137" SourceId="1" SourceUrl="http://127.0.0.1:8180/BioConnectAPI/service/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="dfef251a-de33-4e3a-a2ef-f3900b73b952" SourceId="1" SourceUrl="http://127.0.0.1:8180/BioConnectAPI/service/mex" />
+    <MetadataFile FileName="System.Windows.Media.Imaging.xsd" MetadataType="Schema" ID="342c9f45-7dd4-447e-94c4-70775f718040" SourceId="1" SourceUrl="http://127.0.0.1:8180/BioConnectAPI/service/mex" />
+    <MetadataFile FileName="System.Windows.Media.xsd" MetadataType="Schema" ID="eef32b65-b53b-4906-bd34-1a9640dee5eb" SourceId="1" SourceUrl="http://127.0.0.1:8180/BioConnectAPI/service/mex" />
+    <MetadataFile FileName="System.Windows.Media.Animation.xsd" MetadataType="Schema" ID="1aa69065-f800-4c29-94e9-c59052fdc52e" SourceId="1" SourceUrl="http://127.0.0.1:8180/BioConnectAPI/service/mex" />
+    <MetadataFile FileName="System.Windows.xsd" MetadataType="Schema" ID="4474a47b-0778-4834-aef4-e353ad730e48" SourceId="1" SourceUrl="http://127.0.0.1:8180/BioConnectAPI/service/mex" />
+    <MetadataFile FileName="System.Windows.Threading.xsd" MetadataType="Schema" ID="6e73db55-0c63-44b9-85ce-7ce35bc34f1d" SourceId="1" SourceUrl="http://127.0.0.1:8180/BioConnectAPI/service/mex" />
+    <MetadataFile FileName="System.IO.xsd" MetadataType="Schema" ID="fa2eac74-cc19-4c63-a419-3552a8c123a0" SourceId="1" SourceUrl="http://127.0.0.1:8180/BioConnectAPI/service/mex" />
+    <MetadataFile FileName="System.xsd" MetadataType="Schema" ID="e7571ea9-8a1d-4fef-9433-958667c9ed99" SourceId="1" SourceUrl="http://127.0.0.1:8180/BioConnectAPI/service/mex" />
+    <MetadataFile FileName="System.Net.Cache.xsd" MetadataType="Schema" ID="d02e3391-3b00-47d1-a0dc-35f844080247" SourceId="1" SourceUrl="http://127.0.0.1:8180/BioConnectAPI/service/mex" />
+    <MetadataFile FileName="System.Collections.Generic.xsd" MetadataType="Schema" ID="a9d8af16-0603-4d8f-b1d6-a018d669ace4" SourceId="1" SourceUrl="http://127.0.0.1:8180/BioConnectAPI/service/mex" />
+    <MetadataFile FileName="Entertech.BiometricService.Dto1.xsd" MetadataType="Schema" ID="b89b7213-3ee6-4dcb-82bf-20f9afc5beb6" SourceId="1" SourceUrl="http://127.0.0.1:8180/BioConnectAPI/service/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

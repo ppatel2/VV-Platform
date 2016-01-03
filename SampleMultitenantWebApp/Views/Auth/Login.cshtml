@@ -1,0 +1,35 @@
+﻿@inherits System.Web.Mvc.WebViewPage<SampleMultitenantWebApp.Models.LoginModel>
+@using System.Web.Mvc.Html
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div> 
+     @using (var form = Html.BeginForm())
+     {
+          <div>
+               @Html.LabelFor(x => x.username)
+               @Html.TextBoxFor(x => x.username)
+          </div>
+
+          <div>
+               @Html.LabelFor(x => x.password)
+               @Html.PasswordFor(x => x.password)
+          </div>
+
+          <div>
+               <input type="submit" value="Log In" />
+          </div>
+
+     }
+    </div>
+</body>
+</html>

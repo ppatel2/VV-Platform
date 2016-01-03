@@ -1,0 +1,881 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/BioConnect.DataObjects" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BioConnect.DataObjects" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/System.Windows.Media.Imaging" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+  <xs:complexType name="DigitusDeviceGroupDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsNew" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToDelete" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DigitusDeviceGroupDataObject" nillable="true" type="tns:DigitusDeviceGroupDataObject" />
+  <xs:complexType name="DigitusDeviceScheduleDataObject">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DeviceTimebandPairs" nillable="true" type="q1:ArrayOfKeyValueOfstringint" />
+      <xs:element minOccurs="0" name="GroupGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsNew" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToDelete" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DigitusDeviceScheduleDataObject" nillable="true" type="tns:DigitusDeviceScheduleDataObject" />
+  <xs:complexType name="DigitusTimebandDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsNew" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToDelete" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DigitusTimebandDataObject" nillable="true" type="tns:DigitusTimebandDataObject" />
+  <xs:complexType name="DigitusDeviceDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Approved" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Auth1Unlocks2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Auth2Unlocks1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ControllerGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="DeviceGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="DoorForced" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntryDelay" type="xs:int" />
+      <xs:element minOccurs="0" name="ExitDelay" type="xs:int" />
+      <xs:element minOccurs="0" name="ForcedLatchAlarm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NodeDeviceNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="NodeSerialNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="ProppedDelay" type="xs:int" />
+      <xs:element minOccurs="0" name="ProppedSeconds" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecurityLevel" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Status1" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="Status2" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="Status3" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="TamperAlarm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DigitusDeviceDataObject" nillable="true" type="tns:DigitusDeviceDataObject" />
+  <xs:complexType name="DigitusEnlineDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Approved" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ControllerGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="EnlineGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="Has125IdReader" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HasFingerReader" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HasRfidReader" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NodeSerialNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="SecurityLevel" type="xs:int" />
+      <xs:element minOccurs="0" name="ShowClock" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TwelveHourClock" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UkDateFormat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdateEnline" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Use125IdReader" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UseFinger" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsePin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UseRfid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DigitusEnlineDataObject" nillable="true" type="tns:DigitusEnlineDataObject" />
+  <xs:complexType name="DigitusControllerDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ControllerFirmwareVersion" type="xs:int" />
+      <xs:element minOccurs="0" name="ControllerFpgaVersion" type="xs:int" />
+      <xs:element minOccurs="0" name="DownloadLogs" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EnlineFirmwareVersion" type="xs:int" />
+      <xs:element minOccurs="0" name="EnlineFpgaVersion" type="xs:int" />
+      <xs:element minOccurs="0" name="Gateway" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Guid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpAssignment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mac" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Online" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RemoteNodeFirmwareVersion" type="xs:int" />
+      <xs:element minOccurs="0" name="RemoteNodeFpgaVersion" type="xs:int" />
+      <xs:element minOccurs="0" name="RemotePort" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subnet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnitModel" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DigitusControllerDataObject" nillable="true" type="tns:DigitusControllerDataObject" />
+  <xs:complexType name="DigitusControllerNodeDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ControllerId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NodeSerialNumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DigitusControllerNodeDataObject" nillable="true" type="tns:DigitusControllerNodeDataObject" />
+  <xs:complexType name="DigitusAlarmDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AckedTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ActiveTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="AlarmGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="AlarmStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="AlarmType" type="xs:int" />
+      <xs:element minOccurs="0" name="ClearedTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ControllerGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="DeviceGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="DeviceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeviceNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="DeviceType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="EventID" type="xs:int" />
+      <xs:element minOccurs="0" name="EventType" type="xs:int" />
+      <xs:element minOccurs="0" name="LastAction" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NodeSN" type="xs:int" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DigitusAlarmDataObject" nillable="true" type="tns:DigitusAlarmDataObject" />
+  <xs:complexType name="DigitusEventDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActivityRecordId" type="xs:long" />
+      <xs:element minOccurs="0" name="DeviceGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="EventDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="EventID" type="xs:int" />
+      <xs:element minOccurs="0" name="EventType" type="xs:int" />
+      <xs:element minOccurs="0" name="SystemDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserGuid" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DigitusEventDataObject" nillable="true" type="tns:DigitusEventDataObject" />
+  <xs:complexType name="ArrayOfUsersDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UsersDataObject" nillable="true" type="tns:UsersDataObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsersDataObject" nillable="true" type="tns:ArrayOfUsersDataObject" />
+  <xs:complexType name="UsersDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cards" nillable="true" type="tns:ArrayOfCardDataObject" />
+      <xs:element minOccurs="0" name="CardsCount" type="xs:int" />
+      <xs:element minOccurs="0" name="DevicePassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExternalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FaceCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Faces" nillable="true" type="tns:ArrayOfFaceDataObject" />
+      <xs:element minOccurs="0" name="FacesCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Fingers" nillable="true" type="tns:ArrayOfFingerDataObject" />
+      <xs:element minOccurs="0" name="FingersCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.Windows.Media.Imaging" minOccurs="0" name="Image" nillable="true" type="q2:BitmapImage" />
+      <xs:element minOccurs="0" name="ImageData" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsAdministrator" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDeviceAdministrator" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Locations" nillable="true" type="tns:ArrayOfLocationDataObject" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Properties" nillable="true" type="tns:ArrayOfPropertyDataObject" />
+      <xs:element minOccurs="0" name="TemplatesCount" type="xs:int" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/System.Windows.Media.Imaging" minOccurs="0" name="ThumbnailImage" nillable="true" type="q3:TransformedBitmap" />
+      <xs:element minOccurs="0" name="UpdatedAt" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserVM" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UsersDataObject" nillable="true" type="tns:UsersDataObject" />
+  <xs:complexType name="ArrayOfCardDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CardDataObject" nillable="true" type="tns:CardDataObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCardDataObject" nillable="true" type="tns:ArrayOfCardDataObject" />
+  <xs:complexType name="CardDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BadgeNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CredentialType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacilityCode" type="xs:long" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsBypass" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Locations" nillable="true" type="tns:ArrayOfLocationDataObject" />
+      <xs:element minOccurs="0" name="PIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Priority" type="xs:int" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/System.Windows.Media.Imaging" minOccurs="0" name="TypeImage" nillable="true" type="q4:TransformedBitmap" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CardDataObject" nillable="true" type="tns:CardDataObject" />
+  <xs:complexType name="ArrayOfLocationDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LocationDataObject" nillable="true" type="tns:LocationDataObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLocationDataObject" nillable="true" type="tns:ArrayOfLocationDataObject" />
+  <xs:complexType name="LocationDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LocationDataObject" nillable="true" type="tns:LocationDataObject" />
+  <xs:complexType name="ArrayOfFaceDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FaceDataObject" nillable="true" type="tns:FaceDataObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFaceDataObject" nillable="true" type="tns:ArrayOfFaceDataObject" />
+  <xs:complexType name="FaceDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedAt" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EnterpriseLevel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageData" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="QualityScore" type="xs:int" />
+      <xs:element minOccurs="0" name="TemplateData" nillable="true" type="tns:ArrayOfFaceTemplateObject" />
+      <xs:element minOccurs="0" name="UpdatedAt" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" name="nIndex" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FaceDataObject" nillable="true" type="tns:FaceDataObject" />
+  <xs:complexType name="ArrayOfFaceTemplateObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FaceTemplateObject" nillable="true" type="tns:FaceTemplateObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFaceTemplateObject" nillable="true" type="tns:ArrayOfFaceTemplateObject" />
+  <xs:complexType name="FaceTemplateObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Checksum" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedAt" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Data" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="EnterpriseLevel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="UpdatedAt" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" name="nIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="nType" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FaceTemplateObject" nillable="true" type="tns:FaceTemplateObject" />
+  <xs:complexType name="ArrayOfFingerDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FingerDataObject" nillable="true" type="tns:FingerDataObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFingerDataObject" nillable="true" type="tns:ArrayOfFingerDataObject" />
+  <xs:complexType name="FingerDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FingerIndex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Templates" nillable="true" type="tns:ArrayOfTemplateObject" />
+      <xs:element minOccurs="0" name="UpdatedAt" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FingerDataObject" nillable="true" type="tns:FingerDataObject" />
+  <xs:complexType name="ArrayOfTemplateObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TemplateObject" nillable="true" type="tns:TemplateObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTemplateObject" nillable="true" type="tns:ArrayOfTemplateObject" />
+  <xs:complexType name="TemplateObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Checksum" type="xs:long" />
+      <xs:element minOccurs="0" name="Data" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="FingerIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="QualityScore" type="xs:int" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/System.Windows.Media.Imaging" minOccurs="0" name="Representation" nillable="true" type="q5:BitmapSource" />
+      <xs:element minOccurs="0" name="UpdatedAt" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TemplateObject" nillable="true" type="tns:TemplateObject" />
+  <xs:complexType name="ArrayOfPropertyDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PropertyDataObject" nillable="true" type="tns:PropertyDataObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPropertyDataObject" nillable="true" type="tns:ArrayOfPropertyDataObject" />
+  <xs:complexType name="PropertyDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="Property" type="q6:KeyValuePairOfstringstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PropertyDataObject" nillable="true" type="tns:PropertyDataObject" />
+  <xs:complexType name="ArrayOfReadersStubDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReadersStubDataObject" nillable="true" type="tns:ReadersStubDataObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReadersStubDataObject" nillable="true" type="tns:ArrayOfReadersStubDataObject" />
+  <xs:complexType name="ReadersStubDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DefaultReader" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DeviceID" type="xs:long" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IPAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Online" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Profile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReaderDataObject" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReadersStubDataObject" nillable="true" type="tns:ReadersStubDataObject" />
+  <xs:complexType name="ReadersDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CardFaceOperationMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardFaceOperationModeCode" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CardFormat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardFormatCode" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CardOffset" type="xs:int" />
+      <xs:element minOccurs="0" name="CardReadMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardReadModeCode" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DHCP" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DefaultReader" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DeviceHandle" type="xs:int" />
+      <xs:element minOccurs="0" name="DeviceID" type="xs:long" />
+      <xs:element minOccurs="0" name="FaceOperationMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FaceOperationModeCode" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FacilityCode" type="xs:int" />
+      <xs:element minOccurs="0" name="FailCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirmwareVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gateway" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IPAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KernelVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastSync" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Online" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OperationMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperationModeCode" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Profile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfileCode" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ReadStatus" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ServerIPAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServerPort" type="xs:int" />
+      <xs:element minOccurs="0" name="Subnet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateTypeCode" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TimeSync" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TimeZone" type="xs:long" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeCode" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="UpdateStatus" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UpdatedAt" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UseServerMatching" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UseServerMode" type="xs:boolean" />
+      <xs:element minOccurs="0" name="WiegandOutput" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WiegandOutputCode" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="WiegandPassthrough" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReadersDataObject" nillable="true" type="tns:ReadersDataObject" />
+  <xs:complexType name="ArrayOfReadersDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReadersDataObject" nillable="true" type="tns:ReadersDataObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReadersDataObject" nillable="true" type="tns:ArrayOfReadersDataObject" />
+  <xs:complexType name="ArrayOfReadersBasicInfoDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReadersBasicInfoDataObject" nillable="true" type="tns:ReadersBasicInfoDataObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReadersBasicInfoDataObject" nillable="true" type="tns:ArrayOfReadersBasicInfoDataObject" />
+  <xs:complexType name="ReadersBasicInfoDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReaderDataObject" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="ReaderName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReadersBasicInfoDataObject" nillable="true" type="tns:ReadersBasicInfoDataObject" />
+  <xs:complexType name="ReaderDescriptionsDataObject">
+    <xs:sequence>
+      <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CardFaceOperationModeDescriptions" nillable="true" type="q7:ArrayOfKeyValueOfReadersDataObject.CardforFaceOperationModeEnumstring9esu30SJ" />
+      <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CardOperationModeDescriptions" nillable="true" type="q8:ArrayOfKeyValueOfReadersDataObject.OperationModeEnumstring9esu30SJ" />
+      <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CardReadModeDescriptions" nillable="true" type="q9:ArrayOfKeyValueOfReadersDataObject.CardReadModeEnumstring9esu30SJ" />
+      <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="FaceOperationModeDescriptions" nillable="true" type="q10:ArrayOfKeyValueOfReadersDataObject.FaceOperationModeEnumstring9esu30SJ" />
+      <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ReaderCardFormatDescriptions" nillable="true" type="q11:ArrayOfKeyValueOfReadersDataObject.CardFormatEnumstring9esu30SJ" />
+      <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ReaderProfileDescriptions" nillable="true" type="q12:ArrayOfKeyValueOfReadersDataObject.ProfileEnumstring9esu30SJ" />
+      <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ReaderTemplateTypeDescriptions" nillable="true" type="q13:ArrayOfKeyValueOfReadersDataObject.TemplateTypeEnumstring9esu30SJ" />
+      <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ReaderTypeDescriptions" nillable="true" type="q14:ArrayOfKeyValueOfReadersDataObject.TypeEnumstring9esu30SJ" />
+      <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="WieganOutputDescriptions" nillable="true" type="q15:ArrayOfKeyValueOfReadersDataObject.WiegandOutputEnumstring9esu30SJ" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReaderDescriptionsDataObject" nillable="true" type="tns:ReaderDescriptionsDataObject" />
+  <xs:simpleType name="ReadersDataObject.CardforFaceOperationModeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="CardOnly" />
+      <xs:enumeration value="CardAndFace" />
+      <xs:enumeration value="CardAndPassword" />
+      <xs:enumeration value="CardAndFaceOrPassword" />
+      <xs:enumeration value="CardAndFaceAndPassword" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ReadersDataObject.CardforFaceOperationModeEnum" nillable="true" type="tns:ReadersDataObject.CardforFaceOperationModeEnum" />
+  <xs:simpleType name="ReadersDataObject.OperationModeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoChange" />
+      <xs:enumeration value="CardPlusBiometric" />
+      <xs:enumeration value="CardPlusBiometricAndBiometricOnly" />
+      <xs:enumeration value="CardOnly" />
+      <xs:enumeration value="CardPlusBiometricPlusPin" />
+      <xs:enumeration value="CardPlusPin" />
+      <xs:enumeration value="BiometricPlusPin" />
+      <xs:enumeration value="IDPlusPin" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ReadersDataObject.OperationModeEnum" nillable="true" type="tns:ReadersDataObject.OperationModeEnum" />
+  <xs:simpleType name="ReadersDataObject.CardReadModeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="User">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CSN">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ReadersDataObject.CardReadModeEnum" nillable="true" type="tns:ReadersDataObject.CardReadModeEnum" />
+  <xs:simpleType name="ReadersDataObject.FaceOperationModeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="FaceOnly" />
+      <xs:enumeration value="FaceAndPassword" />
+      <xs:enumeration value="FuncKeyAndFace" />
+      <xs:enumeration value="FuncKeyAndFaceAndPassword" />
+      <xs:enumeration value="FaceAndFuncKey" />
+      <xs:enumeration value="FaceAndPasswordAndFuncKey" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ReadersDataObject.FaceOperationModeEnum" nillable="true" type="tns:ReadersDataObject.FaceOperationModeEnum" />
+  <xs:simpleType name="ReadersDataObject.CardFormatEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Corp1000">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Standard_26bit">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="_37bit_H10304">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ReadersDataObject.CardFormatEnum" nillable="true" type="tns:ReadersDataObject.CardFormatEnum" />
+  <xs:simpleType name="ReadersDataObject.ProfileEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Default">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Facebook">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ReadersDataObject.ProfileEnum" nillable="true" type="tns:ReadersDataObject.ProfileEnum" />
+  <xs:simpleType name="ReadersDataObject.TemplateTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Suprema">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ANSI">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ISO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ReadersDataObject.TemplateTypeEnum" nillable="true" type="tns:ReadersDataObject.TemplateTypeEnum" />
+  <xs:simpleType name="ReadersDataObject.TypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BioStation">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BioEntryPlus">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BioLiteNet">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DStation" />
+      <xs:enumeration value="BioStationT2">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FaceStation">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BioEntryPlusW">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BioMini">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9999</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BioLiteNetGen2">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">203</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BioStation2">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">208</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ReadersDataObject.TypeEnum" nillable="true" type="tns:ReadersDataObject.TypeEnum" />
+  <xs:simpleType name="ReadersDataObject.WiegandOutputEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="User">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Card">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ReadersDataObject.WiegandOutputEnum" nillable="true" type="tns:ReadersDataObject.WiegandOutputEnum" />
+  <xs:simpleType name="FingerDataObject.FingerCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LeftThumb">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LeftIndexFinger">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LeftMiddleFinger">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LeftRingFinger">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LeftLittleFinger">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RightThumb">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RightIndexFinger">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RightMiddleFinger">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RightRingFinger">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RightLittleFinger">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FingerDataObject.FingerCode" nillable="true" type="tns:FingerDataObject.FingerCode" />
+  <xs:complexType name="UsersAdminDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DevicePassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsAdministrator" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDeviceAdministrator" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UsersAdminDataObject" nillable="true" type="tns:UsersAdminDataObject" />
+  <xs:complexType name="ArrayOfActivityRecordsDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ActivityRecordsDataObject" nillable="true" type="tns:ActivityRecordsDataObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActivityRecordsDataObject" nillable="true" type="tns:ArrayOfActivityRecordsDataObject" />
+  <xs:complexType name="ActivityRecordsDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CardId" type="xs:long" />
+      <xs:element minOccurs="0" name="DeviceEventTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeviceId" type="xs:long" />
+      <xs:element minOccurs="0" name="IP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="LogTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReaderId" type="xs:long" />
+      <xs:element minOccurs="0" name="ReaderLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReaderName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SystemEventTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserId" type="xs:long" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActivityRecordsDataObject" nillable="true" type="tns:ActivityRecordsDataObject" />
+  <xs:complexType name="ArrayOfUsersStubDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UsersStubDataObject" nillable="true" type="tns:UsersStubDataObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsersStubDataObject" nillable="true" type="tns:ArrayOfUsersStubDataObject" />
+  <xs:complexType name="UsersStubDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CardsCount" type="xs:int" />
+      <xs:element minOccurs="0" name="FacesCount" type="xs:int" />
+      <xs:element minOccurs="0" name="FingersCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UsersStubDataObject" nillable="true" type="tns:UsersStubDataObject" />
+  <xs:complexType name="ReadersCountsDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Online" type="xs:int" />
+      <xs:element minOccurs="0" name="Total" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReadersCountsDataObject" nillable="true" type="tns:ReadersCountsDataObject" />
+  <xs:complexType name="ArrayOfDigitusConnectionInfoDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DigitusConnectionInfoDataObject" nillable="true" type="tns:DigitusConnectionInfoDataObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDigitusConnectionInfoDataObject" nillable="true" type="tns:ArrayOfDigitusConnectionInfoDataObject" />
+  <xs:complexType name="DigitusConnectionInfoDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsNew" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Port" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServerIP" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DigitusConnectionInfoDataObject" nillable="true" type="tns:DigitusConnectionInfoDataObject" />
+  <xs:complexType name="ArrayOfDigitusDeviceGroupDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DigitusDeviceGroupDataObject" nillable="true" type="tns:DigitusDeviceGroupDataObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDigitusDeviceGroupDataObject" nillable="true" type="tns:ArrayOfDigitusDeviceGroupDataObject" />
+  <xs:complexType name="ArrayOfDigitusControllerDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DigitusControllerDataObject" nillable="true" type="tns:DigitusControllerDataObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDigitusControllerDataObject" nillable="true" type="tns:ArrayOfDigitusControllerDataObject" />
+  <xs:complexType name="ArrayOfDigitusControllerNodeDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DigitusControllerNodeDataObject" nillable="true" type="tns:DigitusControllerNodeDataObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDigitusControllerNodeDataObject" nillable="true" type="tns:ArrayOfDigitusControllerNodeDataObject" />
+  <xs:complexType name="ArrayOfDigitusEnlineDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DigitusEnlineDataObject" nillable="true" type="tns:DigitusEnlineDataObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDigitusEnlineDataObject" nillable="true" type="tns:ArrayOfDigitusEnlineDataObject" />
+  <xs:complexType name="ArrayOfDigitusDeviceDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DigitusDeviceDataObject" nillable="true" type="tns:DigitusDeviceDataObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDigitusDeviceDataObject" nillable="true" type="tns:ArrayOfDigitusDeviceDataObject" />
+  <xs:complexType name="ArrayOfDigitusTimebandDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DigitusTimebandDataObject" nillable="true" type="tns:DigitusTimebandDataObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDigitusTimebandDataObject" nillable="true" type="tns:ArrayOfDigitusTimebandDataObject" />
+  <xs:complexType name="ArrayOfDigitusDeviceScheduleDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DigitusDeviceScheduleDataObject" nillable="true" type="tns:DigitusDeviceScheduleDataObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDigitusDeviceScheduleDataObject" nillable="true" type="tns:ArrayOfDigitusDeviceScheduleDataObject" />
+  <xs:complexType name="ArrayOfDigitusEventDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DigitusEventDataObject" nillable="true" type="tns:DigitusEventDataObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDigitusEventDataObject" nillable="true" type="tns:ArrayOfDigitusEventDataObject" />
+  <xs:complexType name="ArrayOfDigitusAlarmDataObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DigitusAlarmDataObject" nillable="true" type="tns:DigitusAlarmDataObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDigitusAlarmDataObject" nillable="true" type="tns:ArrayOfDigitusAlarmDataObject" />
+</xs:schema>

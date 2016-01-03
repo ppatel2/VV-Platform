@@ -1,0 +1,272 @@
+/* Fonts */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+/* Defaults */
+* {
+  	margin: 0;
+  	padding: 0; 
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.ajaxLink{
+    display: block;
+    background-color: red;
+    width:100%;
+}
+
+/* Bootstrap */
+.btn-primary {
+    box-shadow: 0 3px 0 0 #5380D1;
+    border: none !important;
+}
+.btn-default {
+    box-shadow: 0 3px 0 0 #D3D3D3;
+    border: none !important;
+}
+.btn-danger {
+    box-shadow: 0 3px 0 0 #CC4638;
+    border: none !important;
+}
+.btn-success {
+	box-shadow: 0 3px 0 0 #51A151;
+	border: none !important;
+}
+.btn-warning {
+	box-shadow: 0 3px 0 0 #D59945;
+	border: none !important;
+}
+
+.inputLabel{
+	font-size: 0.7em;
+	font-weight: 700;
+	opacity: 0.7;
+	font-family: 'Montserrat', sans-serif;
+	position: absolute;
+	margin-top: -1rem;
+}
+/* Helpers */
+
+.bg-main {
+    background-color: #ffffff;
+    color: #9FB3B8;
+    border-bottom: 1px solid #E7E7E7;
+    box-shadow: 0 4px 2px -2px rgba(0,0,0,0.05)
+}
+
+.noPadding {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.noPadding:first {
+    margin-right: 1rem !important;
+}
+
+.colCentered {
+	display: block;
+    float: none;
+    margin: 0 auto;
+}
+
+.input-sm{
+	padding: 0.16rem 0.75rem;
+}
+
+.noShadow{
+	box-shadow: none !important;
+}
+
+/* Horizontal Nav Bar */
+
+.navbar {
+    border-radius: 0rem !important;
+}
+
+.navbar > .navbar-currentView {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    width: 180px;
+}
+.navbar-fixed-top{
+    z-index: 999;
+}
+
+
+/* Vertical Nav Bar */
+
+#wrapper {
+    overflow-x: hidden;
+    padding-left: 0;
+}
+
+#wrapper.toggled {
+    padding-left: 6%;
+}
+
+#menuToggle {
+    display: inline;
+    bottom: 1rem;
+    color: white;
+    font-size: 1.3em;
+    padding: 0 !important;
+    position: absolute;
+    right: 1.5rem;
+}
+
+#pageContentWrapper{
+    display: block;
+    height: 100%;
+    margin-right: 0;
+    padding-left: 5%;
+    padding-top: 70px;
+    position: relative;
+    width: 100%;
+}
+
+#sidebarWrapper {
+    background: #2F313A;
+    height: 100%;
+    left: 220px;
+    margin-left: -220px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    min-width: 60px;
+    width: 4%;
+    z-index: 1000;
+}
+
+.navHidden {
+    display: none;
+}
+
+#sidebarWrapper hr{
+	border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Sidebar Styles */
+
+.sidebarNav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.sidebarNav li {
+    color: #fff;
+    font-size: 1em;
+    line-height: 35px;
+}
+
+.sidebarNav > .sidebarHeading {
+    font-family: 'Montserrat', sans-serif;
+    text-indent: 20px;
+}
+
+.sidebarNav li a {
+    color: #849DB5; 
+    display: block;
+    width: 100%;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+.sidebarNav li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebarNav li a:active,
+.sidebarNav li a:focus {
+    text-decoration: none;
+}
+
+.sidebarNav > .sidebarBrand {
+    background-color: #81c641;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    height: 50px;
+    line-height: 47px;
+}
+
+.sidebarNav > .sidebarBrand a,
+.sidebarNav > .sidebarBrand a:hover {
+    background: none;
+    color: #fff;
+}
+
+.sidebarNav > .activeTab {
+	border-left: 3px solid #81c641;
+    background-color: #212329;
+}
+
+.activeTab a {
+    color: #fff !important;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 200px;
+    }
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+    #wrapper.toggled #pageContentWrapper{
+        padding-left: 7%;
+    } 
+    #sidebarWrapper {
+        width: 220px;
+    }
+    .navHidden {
+        display: inline;
+    }
+    #wrapper.toggled #sidebarWrapper {
+        min-width: 60px;
+        width: 4%;
+    }
+    #wrapper.toggled nav{
+    	padding-left: 200px;
+    }
+}
+
+/* User Profile */
+#userProfileImage{
+	background: url(http://hellogiggles.hellogiggles.netdna-cdn.com/wp-content/uploads/2014/05/09/olivia-wilde-featured.jpg) no-repeat;
+	background-size: 35px 35px;
+	border-radius: 20px;
+	display: inline-block;
+	float: right;
+	height: 35px;
+	width: 35px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+}
+
+/* Pills and Alignment */
+
+.notificationPill {
+    margin-right:10px;
+    margin-top:9px;
+}
+
+
+/* Global Table Styles */
+
+.thead-inverse th:first-child{
+  border-radius:5px 0 0 5px;
+}
+
+.thead-inverse th:last-child{
+  border-radius:0 5px 5px 0;
+}

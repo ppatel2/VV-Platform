@@ -1,0 +1,1522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.BioConnect.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.BioConnect.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.BioConnect.com/Imports">
+      <xsd:import namespace="http://www.BioConnect.com" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/BioConnect.DataObjects" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Windows.Media.Imaging" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Windows.Media" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Windows.Media.Animation" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Windows" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Windows.Threading" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.IO" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Net.Cache" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Dto" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBioConnectAPI_ReconnectDigitusService_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReconnectDigitusService" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_ReconnectDigitusService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReconnectDigitusServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_ReconnectDigitusService_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q1:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DigitusLockUnlockSystem_InputMessage">
+    <wsdl:part name="parameters" element="tns:DigitusLockUnlockSystem" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DigitusLockUnlockSystem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DigitusLockUnlockSystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DigitusLockUnlockSystem_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q2:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DigitusLockDevice_InputMessage">
+    <wsdl:part name="parameters" element="tns:DigitusLockDevice" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DigitusLockDevice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DigitusLockDeviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DigitusLockDevice_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q3:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DigitusUnlockDevice_InputMessage">
+    <wsdl:part name="parameters" element="tns:DigitusUnlockDevice" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DigitusUnlockDevice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DigitusUnlockDeviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DigitusUnlockDevice_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q4:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_BeginUserSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:BeginUserSearch" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_BeginUserSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BeginUserSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_BeginUserSearch_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q5:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_ReadCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadCard" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_ReadCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_ReadCard_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q6:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_AuditLogSynchronize_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuditLogSynchronize" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_AuditLogSynchronize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuditLogSynchronizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_AuditLogSynchronize_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q7:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_LogOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogOut" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_LogOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_LogOut_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q8:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_ResetAcm_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetAcm" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_ResetAcm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetAcmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_ResetAcm_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q9:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateDigitusDeviceGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDigitusDeviceGroup" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateDigitusDeviceGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDigitusDeviceGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateDigitusDeviceGroup_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q10:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_AddDigitusDeviceGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDigitusDeviceGroup" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_AddDigitusDeviceGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDigitusDeviceGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_AddDigitusDeviceGroup_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q11:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DigitusStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:DigitusStatus" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DigitusStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DigitusStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DigitusStatus_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q12:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusAccessSchdule_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusAccessSchdule" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusAccessSchdule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusAccessSchduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusAccessSchdule_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q13:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusTimeband_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusTimeband" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusTimeband_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusTimebandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusTimeband_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q14:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusDevice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusDevice" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusDevice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusDeviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusDevice_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q15:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusEnline_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusEnline" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusEnline_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusEnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusEnline_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q16:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusDeviceGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusDeviceGroup" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusDeviceGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusDeviceGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusDeviceGroup_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q17:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusController_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusController" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusController_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusControllerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusController_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q18:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusControllerNode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusControllerNode" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusControllerNode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusControllerNodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusControllerNode_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q19:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusAlarm_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusAlarm" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusAlarm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusAlarmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusAlarm_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q20:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusEvent" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusEvent_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q21:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusAvailableUserPins_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusAvailableUserPins" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusAvailableUserPins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusAvailableUserPinsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusAvailableUserPins_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q22:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_FindUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindUser" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_FindUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_FindUser_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q23:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetUserByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByID" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetUserByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetUserByID_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q24:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetReaderIDs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReaderIDs" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetReaderIDs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReaderIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetReaderIDs_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q25:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetReaderDetailsByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReaderDetailsByID" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetReaderDetailsByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReaderDetailsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetReaderDetailsByID_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q26:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetReaders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReaders" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetReaders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReadersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetReaders_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q27:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetReadersBasicInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReadersBasicInfo" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetReadersBasicInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReadersBasicInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetReadersBasicInfo_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q28:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveReader_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveReader" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveReader_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveReaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveReader_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q29:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_ScanUserFaceData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ScanUserFaceData" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_ScanUserFaceData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ScanUserFaceDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_ScanUserFaceData_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q30:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateReaderConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReaderConfig" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateReaderConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReaderConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateReaderConfig_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q31:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveScannedTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveScannedTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveScannedTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveScannedTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveScannedTemplate_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q32:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveDigitusTemplates_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDigitusTemplates" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveDigitusTemplates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDigitusTemplatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveDigitusTemplates_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q33:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GertReaderDescriptions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GertReaderDescriptions" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GertReaderDescriptions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GertReaderDescriptionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GertReaderDescriptions_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q34:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetFingerDescriptions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFingerDescriptions" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetFingerDescriptions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFingerDescriptionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetFingerDescriptions_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q35:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetTemplateObject_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTemplateObject" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetTemplateObject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTemplateObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetTemplateObject_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q36:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DeleteTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DeleteTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DeleteTemplate_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q37:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveUserAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUserAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveUserAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUserAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveUserAdmin_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q38:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_RetrieveSecurityToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveSecurityToken" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_RetrieveSecurityToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveSecurityTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_RetrieveSecurityToken_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q39:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_AuthroizeUserLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthroizeUserLogin" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_AuthroizeUserLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthroizeUserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_AuthroizeUserLogin_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q40:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_AuthenticateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUser" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_AuthenticateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_AuthenticateUser_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q41:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_RetrieveLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveLocations" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_RetrieveLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_RetrieveLocations_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q42:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_FindUserInLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindUserInLocation" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_FindUserInLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindUserInLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_FindUserInLocation_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q43:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_AcmType_InputMessage">
+    <wsdl:part name="parameters" element="tns:AcmType" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_AcmType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AcmTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_AcmType_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q44:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_Synchronize_InputMessage">
+    <wsdl:part name="parameters" element="tns:Synchronize" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_Synchronize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_Synchronize_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q45:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SynchronizeAllReaders_InputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizeAllReaders" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SynchronizeAllReaders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizeAllReadersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SynchronizeAllReaders_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q46:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_ServerVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ServerVersion" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_ServerVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ServerVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_ServerVersion_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q47:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_RetrieveSecurityTokenByUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveSecurityTokenByUsername" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_RetrieveSecurityTokenByUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveSecurityTokenByUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_RetrieveSecurityTokenByUsername_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q48:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_RetrieveSecurityTokenById_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveSecurityTokenById" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_RetrieveSecurityTokenById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveSecurityTokenByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_RetrieveSecurityTokenById_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q49:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveSecurityToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSecurityToken" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveSecurityToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSecurityTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveSecurityToken_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q50:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetLatestActivityRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatestActivityRecords" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetLatestActivityRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatestActivityRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetLatestActivityRecords_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q51:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetUserIdList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserIdList" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetUserIdList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserIdListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetUserIdList_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q52:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_FilterUsersByCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:FilterUsersByCard" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_FilterUsersByCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FilterUsersByCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_FilterUsersByCard_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q53="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q53:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_RestartReader_InputMessage">
+    <wsdl:part name="parameters" element="tns:RestartReader" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_RestartReader_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RestartReaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_RestartReader_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q54:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateFirmware_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFirmware" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateFirmware_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFirmwareResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateFirmware_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q55="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q55:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_AuthenticateADUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateADUser" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_AuthenticateADUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateADUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_AuthenticateADUser_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q56:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetReadersCounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReadersCounts" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetReadersCounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReadersCountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetReadersCounts_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q57="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q57:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DeleteReader_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteReader" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DeleteReader_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteReaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DeleteReader_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q58="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q58:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetUserBadgeNumbers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserBadgeNumbers" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetUserBadgeNumbers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserBadgeNumbersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetUserBadgeNumbers_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q59="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q59:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateCardsSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCardsSettings" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateCardsSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCardsSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateCardsSettings_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q60="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q60:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SiteCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:SiteCode" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SiteCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SiteCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SiteCode_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q61="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q61:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SiteKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:SiteKey" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SiteKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SiteKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SiteKey_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q62="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q62:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_Restrictions_InputMessage">
+    <wsdl:part name="parameters" element="tns:Restrictions" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_Restrictions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RestrictionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_Restrictions_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q63="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q63:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetLicensePath_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicensePath" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetLicensePath_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicensePathResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetLicensePath_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q64="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q64:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_FormatCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:FormatCard" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_FormatCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FormatCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_FormatCard_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q65="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q65:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_isServerLoaded_InputMessage">
+    <wsdl:part name="parameters" element="tns:isServerLoaded" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_isServerLoaded_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isServerLoadedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_isServerLoaded_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q66="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q66:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_WriteToCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteToCard" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_WriteToCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WriteToCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_WriteToCard_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q67="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q67:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetUserIdByBadgeNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserIdByBadgeNumber" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetUserIdByBadgeNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserIdByBadgeNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetUserIdByBadgeNumber_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q68="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q68:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetLicenseExpiry_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseExpiry" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetLicenseExpiry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseExpiryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetLicenseExpiry_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q69="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q69:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetLicenseActive_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseActive" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetLicenseActive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseActiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetLicenseActive_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q70="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q70:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveAppSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAppSettings" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveAppSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAppSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveAppSettings_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q71="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q71:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetAppSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppSettings" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetAppSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetAppSettings_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q72="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q72:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DatabaseImport_InputMessage">
+    <wsdl:part name="parameters" element="tns:DatabaseImport" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DatabaseImport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DatabaseImportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DatabaseImport_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q73="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q73:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetUserImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserImage" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetUserImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetUserImage_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q74="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q74:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateReaderTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReaderTime" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateReaderTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReaderTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateReaderTime_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q75="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q75:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetReaderTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReaderTime" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetReaderTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReaderTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetReaderTime_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q76="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q76:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveUserFaceLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUserFaceLocations" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveUserFaceLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUserFaceLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveUserFaceLocations_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q77="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q77:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GenerateHealthCheck_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateHealthCheck" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GenerateHealthCheck_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateHealthCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GenerateHealthCheck_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q78="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q78:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SynchronizeUserLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizeUserLocations" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SynchronizeUserLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizeUserLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SynchronizeUserLocations_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q79="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q79:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetUserListByIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserListByIds" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetUserListByIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserListByIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetUserListByIds_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q80="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q80:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusConnectionsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusConnectionsList" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusConnectionsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusConnectionsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusConnectionsList_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q81="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q81:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusDeviceGroupList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusDeviceGroupList" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusDeviceGroupList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusDeviceGroupListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusDeviceGroupList_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q82="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q82:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusBusControllers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusBusControllers" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusBusControllers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusBusControllersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusBusControllers_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q83="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q83:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusSentryControllers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusSentryControllers" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusSentryControllers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusSentryControllersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusSentryControllers_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q84="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q84:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusBusControllerNodes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusBusControllerNodes" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusBusControllerNodes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusBusControllerNodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusBusControllerNodes_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q85="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q85:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusBusControllerEnlines_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusBusControllerEnlines" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusBusControllerEnlines_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusBusControllerEnlinesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusBusControllerEnlines_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q86="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q86:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusBusControllerNodeDevices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusBusControllerNodeDevices" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusBusControllerNodeDevices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusBusControllerNodeDevicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusBusControllerNodeDevices_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q87="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q87:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusSentryControllerDevices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusSentryControllerDevices" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusSentryControllerDevices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusSentryControllerDevicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusSentryControllerDevices_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q88="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q88:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetAllDigitusDevices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDigitusDevices" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetAllDigitusDevices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDigitusDevicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetAllDigitusDevices_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q89="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q89:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusTimeBands_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusTimeBands" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusTimeBands_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusTimeBandsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusTimeBands_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q90="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q90:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusAccessScheduleList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusAccessScheduleList" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusAccessScheduleList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusAccessScheduleListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusAccessScheduleList_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q91="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q91:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusAccessSchedulesOnly_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusAccessSchedulesOnly" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusAccessSchedulesOnly_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDigitusAccessSchedulesOnlyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetDigitusAccessSchedulesOnly_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q92="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q92:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetLatestDigitusEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatestDigitusEvents" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetLatestDigitusEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatestDigitusEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetLatestDigitusEvents_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q93="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q93:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetLatestDigitusAlarms_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatestDigitusAlarms" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetLatestDigitusAlarms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatestDigitusAlarmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetLatestDigitusAlarms_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q94="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q94:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_AcknowledgeDigitusAlarm_InputMessage">
+    <wsdl:part name="parameters" element="tns:AcknowledgeDigitusAlarm" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_AcknowledgeDigitusAlarm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AcknowledgeDigitusAlarmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_AcknowledgeDigitusAlarm_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q95="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q95:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveDigitusConnectionInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDigitusConnectionInfo" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveDigitusConnectionInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDigitusConnectionInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveDigitusConnectionInfo_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q96="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q96:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DeleteDigitusConnectionInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDigitusConnectionInfo" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DeleteDigitusConnectionInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDigitusConnectionInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DeleteDigitusConnectionInfo_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q97="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q97:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DeleteFaceEnrollment_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFaceEnrollment" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DeleteFaceEnrollment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFaceEnrollmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_DeleteFaceEnrollment_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q98="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q98:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_CheckUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUsername" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_CheckUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_CheckUsername_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q99="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q99:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateDigitusDevice_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDigitusDevice" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateDigitusDevice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDigitusDeviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateDigitusDevice_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q100="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q100:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateDigitusEnline_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDigitusEnline" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateDigitusEnline_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDigitusEnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateDigitusEnline_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q101="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q101:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateDigitusController_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDigitusController" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateDigitusController_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDigitusControllerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateDigitusController_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q102="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q102:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateDigitusControllerNode_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDigitusControllerNode" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateDigitusControllerNode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDigitusControllerNodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateDigitusControllerNode_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q103="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q103:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateDigitusTimeband_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDigitusTimeband" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateDigitusTimeband_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDigitusTimebandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateDigitusTimeband_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q104="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q104:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateDigitusDeviceScheduleGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDigitusDeviceScheduleGroup" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateDigitusDeviceScheduleGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDigitusDeviceScheduleGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_UpdateDigitusDeviceScheduleGroup_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q105="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q105:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveUserProperties_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUserProperties" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveUserProperties_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUserPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_SaveUserProperties_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q106="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q106:BioConnectException" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetUserProperty_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserProperty" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetUserProperty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPropertyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBioConnectAPI_GetUserProperty_BioConnectExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q107="http://schemas.datacontract.org/2004/07/Entertech.BiometricService.Api" name="detail" element="q107:BioConnectException" />
+  </wsdl:message>
+  <wsdl:portType name="IBioConnectAPI">
+    <wsdl:operation name="ReconnectDigitusService">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/ReconnectDigitusService" message="tns:IBioConnectAPI_ReconnectDigitusService_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/ReconnectDigitusServiceResponse" message="tns:IBioConnectAPI_ReconnectDigitusService_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/ReconnectDigitusServiceBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_ReconnectDigitusService_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DigitusLockUnlockSystem">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DigitusLockUnlockSystem" message="tns:IBioConnectAPI_DigitusLockUnlockSystem_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DigitusLockUnlockSystemResponse" message="tns:IBioConnectAPI_DigitusLockUnlockSystem_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DigitusLockUnlockSystemBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_DigitusLockUnlockSystem_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DigitusLockDevice">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DigitusLockDevice" message="tns:IBioConnectAPI_DigitusLockDevice_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DigitusLockDeviceResponse" message="tns:IBioConnectAPI_DigitusLockDevice_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DigitusLockDeviceBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_DigitusLockDevice_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DigitusUnlockDevice">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DigitusUnlockDevice" message="tns:IBioConnectAPI_DigitusUnlockDevice_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DigitusUnlockDeviceResponse" message="tns:IBioConnectAPI_DigitusUnlockDevice_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DigitusUnlockDeviceBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_DigitusUnlockDevice_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BeginUserSearch">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/BeginUserSearch" message="tns:IBioConnectAPI_BeginUserSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/BeginUserSearchResponse" message="tns:IBioConnectAPI_BeginUserSearch_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/BeginUserSearchBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_BeginUserSearch_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadCard">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/ReadCard" message="tns:IBioConnectAPI_ReadCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/ReadCardResponse" message="tns:IBioConnectAPI_ReadCard_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/ReadCardBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_ReadCard_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuditLogSynchronize">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/AuditLogSynchronize" message="tns:IBioConnectAPI_AuditLogSynchronize_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/AuditLogSynchronizeResponse" message="tns:IBioConnectAPI_AuditLogSynchronize_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/AuditLogSynchronizeBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_AuditLogSynchronize_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogOut">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/LogOut" message="tns:IBioConnectAPI_LogOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/LogOutResponse" message="tns:IBioConnectAPI_LogOut_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/LogOutBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_LogOut_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetAcm">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/ResetAcm" message="tns:IBioConnectAPI_ResetAcm_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/ResetAcmResponse" message="tns:IBioConnectAPI_ResetAcm_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/ResetAcmBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_ResetAcm_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDigitusDeviceGroup">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateDigitusDeviceGroup" message="tns:IBioConnectAPI_UpdateDigitusDeviceGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateDigitusDeviceGroupResponse" message="tns:IBioConnectAPI_UpdateDigitusDeviceGroup_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateDigitusDeviceGroupBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_UpdateDigitusDeviceGroup_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDigitusDeviceGroup">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/AddDigitusDeviceGroup" message="tns:IBioConnectAPI_AddDigitusDeviceGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/AddDigitusDeviceGroupResponse" message="tns:IBioConnectAPI_AddDigitusDeviceGroup_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/AddDigitusDeviceGroupBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_AddDigitusDeviceGroup_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DigitusStatus">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DigitusStatus" message="tns:IBioConnectAPI_DigitusStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DigitusStatusResponse" message="tns:IBioConnectAPI_DigitusStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DigitusStatusBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_DigitusStatus_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDigitusAccessSchdule">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusAccessSchdule" message="tns:IBioConnectAPI_GetDigitusAccessSchdule_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusAccessSchduleResponse" message="tns:IBioConnectAPI_GetDigitusAccessSchdule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusAccessSchduleBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetDigitusAccessSchdule_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDigitusTimeband">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusTimeband" message="tns:IBioConnectAPI_GetDigitusTimeband_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusTimebandResponse" message="tns:IBioConnectAPI_GetDigitusTimeband_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusTimebandBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetDigitusTimeband_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDigitusDevice">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusDevice" message="tns:IBioConnectAPI_GetDigitusDevice_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusDeviceResponse" message="tns:IBioConnectAPI_GetDigitusDevice_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusDeviceBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetDigitusDevice_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDigitusEnline">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusEnline" message="tns:IBioConnectAPI_GetDigitusEnline_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusEnlineResponse" message="tns:IBioConnectAPI_GetDigitusEnline_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusEnlineBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetDigitusEnline_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDigitusDeviceGroup">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusDeviceGroup" message="tns:IBioConnectAPI_GetDigitusDeviceGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusDeviceGroupResponse" message="tns:IBioConnectAPI_GetDigitusDeviceGroup_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusDeviceGroupBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetDigitusDeviceGroup_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDigitusController">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusController" message="tns:IBioConnectAPI_GetDigitusController_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusControllerResponse" message="tns:IBioConnectAPI_GetDigitusController_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusControllerBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetDigitusController_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDigitusControllerNode">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusControllerNode" message="tns:IBioConnectAPI_GetDigitusControllerNode_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusControllerNodeResponse" message="tns:IBioConnectAPI_GetDigitusControllerNode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusControllerNodeBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetDigitusControllerNode_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDigitusAlarm">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusAlarm" message="tns:IBioConnectAPI_GetDigitusAlarm_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusAlarmResponse" message="tns:IBioConnectAPI_GetDigitusAlarm_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusAlarmBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetDigitusAlarm_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDigitusEvent">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusEvent" message="tns:IBioConnectAPI_GetDigitusEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusEventResponse" message="tns:IBioConnectAPI_GetDigitusEvent_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusEventBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetDigitusEvent_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDigitusAvailableUserPins">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusAvailableUserPins" message="tns:IBioConnectAPI_GetDigitusAvailableUserPins_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusAvailableUserPinsResponse" message="tns:IBioConnectAPI_GetDigitusAvailableUserPins_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusAvailableUserPinsBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetDigitusAvailableUserPins_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUser">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/FindUser" message="tns:IBioConnectAPI_FindUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/FindUserResponse" message="tns:IBioConnectAPI_FindUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/FindUserBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_FindUser_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByID">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetUserByID" message="tns:IBioConnectAPI_GetUserByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetUserByIDResponse" message="tns:IBioConnectAPI_GetUserByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetUserByIDBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetUserByID_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReaderIDs">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetReaderIDs" message="tns:IBioConnectAPI_GetReaderIDs_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetReaderIDsResponse" message="tns:IBioConnectAPI_GetReaderIDs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetReaderIDsBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetReaderIDs_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReaderDetailsByID">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetReaderDetailsByID" message="tns:IBioConnectAPI_GetReaderDetailsByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetReaderDetailsByIDResponse" message="tns:IBioConnectAPI_GetReaderDetailsByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetReaderDetailsByIDBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetReaderDetailsByID_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReaders">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetReaders" message="tns:IBioConnectAPI_GetReaders_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetReadersResponse" message="tns:IBioConnectAPI_GetReaders_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetReadersBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetReaders_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReadersBasicInfo">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetReadersBasicInfo" message="tns:IBioConnectAPI_GetReadersBasicInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetReadersBasicInfoResponse" message="tns:IBioConnectAPI_GetReadersBasicInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetReadersBasicInfoBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetReadersBasicInfo_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveReader">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveReader" message="tns:IBioConnectAPI_SaveReader_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveReaderResponse" message="tns:IBioConnectAPI_SaveReader_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveReaderBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_SaveReader_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ScanUserFaceData">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/ScanUserFaceData" message="tns:IBioConnectAPI_ScanUserFaceData_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/ScanUserFaceDataResponse" message="tns:IBioConnectAPI_ScanUserFaceData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/ScanUserFaceDataBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_ScanUserFaceData_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReaderConfig">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateReaderConfig" message="tns:IBioConnectAPI_UpdateReaderConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateReaderConfigResponse" message="tns:IBioConnectAPI_UpdateReaderConfig_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateReaderConfigBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_UpdateReaderConfig_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveScannedTemplate">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveScannedTemplate" message="tns:IBioConnectAPI_SaveScannedTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveScannedTemplateResponse" message="tns:IBioConnectAPI_SaveScannedTemplate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveScannedTemplateBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_SaveScannedTemplate_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDigitusTemplates">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveDigitusTemplates" message="tns:IBioConnectAPI_SaveDigitusTemplates_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveDigitusTemplatesResponse" message="tns:IBioConnectAPI_SaveDigitusTemplates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveDigitusTemplatesBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_SaveDigitusTemplates_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GertReaderDescriptions">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GertReaderDescriptions" message="tns:IBioConnectAPI_GertReaderDescriptions_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GertReaderDescriptionsResponse" message="tns:IBioConnectAPI_GertReaderDescriptions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GertReaderDescriptionsBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GertReaderDescriptions_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFingerDescriptions">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetFingerDescriptions" message="tns:IBioConnectAPI_GetFingerDescriptions_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetFingerDescriptionsResponse" message="tns:IBioConnectAPI_GetFingerDescriptions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetFingerDescriptionsBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetFingerDescriptions_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplateObject">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetTemplateObject" message="tns:IBioConnectAPI_GetTemplateObject_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetTemplateObjectResponse" message="tns:IBioConnectAPI_GetTemplateObject_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetTemplateObjectBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetTemplateObject_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTemplate">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DeleteTemplate" message="tns:IBioConnectAPI_DeleteTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DeleteTemplateResponse" message="tns:IBioConnectAPI_DeleteTemplate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DeleteTemplateBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_DeleteTemplate_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserAdmin">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveUserAdmin" message="tns:IBioConnectAPI_SaveUserAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveUserAdminResponse" message="tns:IBioConnectAPI_SaveUserAdmin_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveUserAdminBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_SaveUserAdmin_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveSecurityToken">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/RetrieveSecurityToken" message="tns:IBioConnectAPI_RetrieveSecurityToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/RetrieveSecurityTokenResponse" message="tns:IBioConnectAPI_RetrieveSecurityToken_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/RetrieveSecurityTokenBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_RetrieveSecurityToken_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthroizeUserLogin">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/AuthroizeUserLogin" message="tns:IBioConnectAPI_AuthroizeUserLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/AuthroizeUserLoginResponse" message="tns:IBioConnectAPI_AuthroizeUserLogin_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/AuthroizeUserLoginBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_AuthroizeUserLogin_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUser">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/AuthenticateUser" message="tns:IBioConnectAPI_AuthenticateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/AuthenticateUserResponse" message="tns:IBioConnectAPI_AuthenticateUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/AuthenticateUserBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_AuthenticateUser_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveLocations">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/RetrieveLocations" message="tns:IBioConnectAPI_RetrieveLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/RetrieveLocationsResponse" message="tns:IBioConnectAPI_RetrieveLocations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/RetrieveLocationsBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_RetrieveLocations_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUserInLocation">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/FindUserInLocation" message="tns:IBioConnectAPI_FindUserInLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/FindUserInLocationResponse" message="tns:IBioConnectAPI_FindUserInLocation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/FindUserInLocationBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_FindUserInLocation_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AcmType">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/AcmType" message="tns:IBioConnectAPI_AcmType_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/AcmTypeResponse" message="tns:IBioConnectAPI_AcmType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/AcmTypeBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_AcmType_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Synchronize">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/Synchronize" message="tns:IBioConnectAPI_Synchronize_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SynchronizeResponse" message="tns:IBioConnectAPI_Synchronize_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SynchronizeBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_Synchronize_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SynchronizeAllReaders">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SynchronizeAllReaders" message="tns:IBioConnectAPI_SynchronizeAllReaders_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SynchronizeAllReadersResponse" message="tns:IBioConnectAPI_SynchronizeAllReaders_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SynchronizeAllReadersBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_SynchronizeAllReaders_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ServerVersion">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/ServerVersion" message="tns:IBioConnectAPI_ServerVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/ServerVersionResponse" message="tns:IBioConnectAPI_ServerVersion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/ServerVersionBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_ServerVersion_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveSecurityTokenByUsername">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/RetrieveSecurityTokenByUsername" message="tns:IBioConnectAPI_RetrieveSecurityTokenByUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/RetrieveSecurityTokenByUsernameResponse" message="tns:IBioConnectAPI_RetrieveSecurityTokenByUsername_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/RetrieveSecurityTokenByUsernameBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_RetrieveSecurityTokenByUsername_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveSecurityTokenById">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/RetrieveSecurityTokenById" message="tns:IBioConnectAPI_RetrieveSecurityTokenById_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/RetrieveSecurityTokenByIdResponse" message="tns:IBioConnectAPI_RetrieveSecurityTokenById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/RetrieveSecurityTokenByIdBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_RetrieveSecurityTokenById_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSecurityToken">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveSecurityToken" message="tns:IBioConnectAPI_SaveSecurityToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveSecurityTokenResponse" message="tns:IBioConnectAPI_SaveSecurityToken_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveSecurityTokenBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_SaveSecurityToken_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestActivityRecords">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetLatestActivityRecords" message="tns:IBioConnectAPI_GetLatestActivityRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetLatestActivityRecordsResponse" message="tns:IBioConnectAPI_GetLatestActivityRecords_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetLatestActivityRecordsBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetLatestActivityRecords_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserIdList">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetUserIdList" message="tns:IBioConnectAPI_GetUserIdList_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetUserIdListResponse" message="tns:IBioConnectAPI_GetUserIdList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetUserIdListBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetUserIdList_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FilterUsersByCard">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/FilterUsersByCard" message="tns:IBioConnectAPI_FilterUsersByCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/FilterUsersByCardResponse" message="tns:IBioConnectAPI_FilterUsersByCard_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/FilterUsersByCardBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_FilterUsersByCard_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RestartReader">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/RestartReader" message="tns:IBioConnectAPI_RestartReader_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/RestartReaderResponse" message="tns:IBioConnectAPI_RestartReader_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/RestartReaderBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_RestartReader_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFirmware">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateFirmware" message="tns:IBioConnectAPI_UpdateFirmware_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateFirmwareResponse" message="tns:IBioConnectAPI_UpdateFirmware_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateFirmwareBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_UpdateFirmware_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateADUser">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/AuthenticateADUser" message="tns:IBioConnectAPI_AuthenticateADUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/AuthenticateADUserResponse" message="tns:IBioConnectAPI_AuthenticateADUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/AuthenticateADUserBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_AuthenticateADUser_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReadersCounts">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetReadersCounts" message="tns:IBioConnectAPI_GetReadersCounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetReadersCountsResponse" message="tns:IBioConnectAPI_GetReadersCounts_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetReadersCountsBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetReadersCounts_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteReader">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DeleteReader" message="tns:IBioConnectAPI_DeleteReader_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DeleteReaderResponse" message="tns:IBioConnectAPI_DeleteReader_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DeleteReaderBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_DeleteReader_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserBadgeNumbers">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetUserBadgeNumbers" message="tns:IBioConnectAPI_GetUserBadgeNumbers_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetUserBadgeNumbersResponse" message="tns:IBioConnectAPI_GetUserBadgeNumbers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetUserBadgeNumbersBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetUserBadgeNumbers_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCardsSettings">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateCardsSettings" message="tns:IBioConnectAPI_UpdateCardsSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateCardsSettingsResponse" message="tns:IBioConnectAPI_UpdateCardsSettings_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateCardsSettingsBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_UpdateCardsSettings_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SiteCode">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SiteCode" message="tns:IBioConnectAPI_SiteCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SiteCodeResponse" message="tns:IBioConnectAPI_SiteCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SiteCodeBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_SiteCode_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SiteKey">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SiteKey" message="tns:IBioConnectAPI_SiteKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SiteKeyResponse" message="tns:IBioConnectAPI_SiteKey_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SiteKeyBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_SiteKey_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Restrictions">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/Restrictions" message="tns:IBioConnectAPI_Restrictions_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/RestrictionsResponse" message="tns:IBioConnectAPI_Restrictions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/RestrictionsBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_Restrictions_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicensePath">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetLicensePath" message="tns:IBioConnectAPI_GetLicensePath_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetLicensePathResponse" message="tns:IBioConnectAPI_GetLicensePath_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetLicensePathBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetLicensePath_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FormatCard">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/FormatCard" message="tns:IBioConnectAPI_FormatCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/FormatCardResponse" message="tns:IBioConnectAPI_FormatCard_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/FormatCardBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_FormatCard_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="isServerLoaded">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/isServerLoaded" message="tns:IBioConnectAPI_isServerLoaded_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/isServerLoadedResponse" message="tns:IBioConnectAPI_isServerLoaded_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/isServerLoadedBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_isServerLoaded_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteToCard">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/WriteToCard" message="tns:IBioConnectAPI_WriteToCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/WriteToCardResponse" message="tns:IBioConnectAPI_WriteToCard_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/WriteToCardBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_WriteToCard_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserIdByBadgeNumber">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetUserIdByBadgeNumber" message="tns:IBioConnectAPI_GetUserIdByBadgeNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetUserIdByBadgeNumberResponse" message="tns:IBioConnectAPI_GetUserIdByBadgeNumber_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetUserIdByBadgeNumberBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetUserIdByBadgeNumber_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseExpiry">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetLicenseExpiry" message="tns:IBioConnectAPI_GetLicenseExpiry_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetLicenseExpiryResponse" message="tns:IBioConnectAPI_GetLicenseExpiry_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetLicenseExpiryBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetLicenseExpiry_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseActive">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetLicenseActive" message="tns:IBioConnectAPI_GetLicenseActive_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetLicenseActiveResponse" message="tns:IBioConnectAPI_GetLicenseActive_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetLicenseActiveBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetLicenseActive_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAppSettings">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveAppSettings" message="tns:IBioConnectAPI_SaveAppSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveAppSettingsResponse" message="tns:IBioConnectAPI_SaveAppSettings_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveAppSettingsBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_SaveAppSettings_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppSettings">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetAppSettings" message="tns:IBioConnectAPI_GetAppSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetAppSettingsResponse" message="tns:IBioConnectAPI_GetAppSettings_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetAppSettingsBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetAppSettings_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DatabaseImport">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DatabaseImport" message="tns:IBioConnectAPI_DatabaseImport_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DatabaseImportResponse" message="tns:IBioConnectAPI_DatabaseImport_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DatabaseImportBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_DatabaseImport_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserImage">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetUserImage" message="tns:IBioConnectAPI_GetUserImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetUserImageResponse" message="tns:IBioConnectAPI_GetUserImage_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetUserImageBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetUserImage_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReaderTime">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateReaderTime" message="tns:IBioConnectAPI_UpdateReaderTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateReaderTimeResponse" message="tns:IBioConnectAPI_UpdateReaderTime_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateReaderTimeBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_UpdateReaderTime_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReaderTime">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetReaderTime" message="tns:IBioConnectAPI_GetReaderTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetReaderTimeResponse" message="tns:IBioConnectAPI_GetReaderTime_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetReaderTimeBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetReaderTime_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserFaceLocations">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveUserFaceLocations" message="tns:IBioConnectAPI_SaveUserFaceLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveUserFaceLocationsResponse" message="tns:IBioConnectAPI_SaveUserFaceLocations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveUserFaceLocationsBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_SaveUserFaceLocations_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateHealthCheck">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GenerateHealthCheck" message="tns:IBioConnectAPI_GenerateHealthCheck_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GenerateHealthCheckResponse" message="tns:IBioConnectAPI_GenerateHealthCheck_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GenerateHealthCheckBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GenerateHealthCheck_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SynchronizeUserLocations">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SynchronizeUserLocations" message="tns:IBioConnectAPI_SynchronizeUserLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SynchronizeUserLocationsResponse" message="tns:IBioConnectAPI_SynchronizeUserLocations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SynchronizeUserLocationsBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_SynchronizeUserLocations_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserListByIds">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetUserListByIds" message="tns:IBioConnectAPI_GetUserListByIds_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetUserListByIdsResponse" message="tns:IBioConnectAPI_GetUserListByIds_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetUserListByIdsBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetUserListByIds_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDigitusConnectionsList">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusConnectionsList" message="tns:IBioConnectAPI_GetDigitusConnectionsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusConnectionsListResponse" message="tns:IBioConnectAPI_GetDigitusConnectionsList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusConnectionsListBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetDigitusConnectionsList_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDigitusDeviceGroupList">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusDeviceGroupList" message="tns:IBioConnectAPI_GetDigitusDeviceGroupList_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusDeviceGroupListResponse" message="tns:IBioConnectAPI_GetDigitusDeviceGroupList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusDeviceGroupListBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetDigitusDeviceGroupList_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDigitusBusControllers">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusBusControllers" message="tns:IBioConnectAPI_GetDigitusBusControllers_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusBusControllersResponse" message="tns:IBioConnectAPI_GetDigitusBusControllers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusBusControllersBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetDigitusBusControllers_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDigitusSentryControllers">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusSentryControllers" message="tns:IBioConnectAPI_GetDigitusSentryControllers_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusSentryControllersResponse" message="tns:IBioConnectAPI_GetDigitusSentryControllers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusSentryControllersBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetDigitusSentryControllers_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDigitusBusControllerNodes">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusBusControllerNodes" message="tns:IBioConnectAPI_GetDigitusBusControllerNodes_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusBusControllerNodesResponse" message="tns:IBioConnectAPI_GetDigitusBusControllerNodes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusBusControllerNodesBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetDigitusBusControllerNodes_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDigitusBusControllerEnlines">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusBusControllerEnlines" message="tns:IBioConnectAPI_GetDigitusBusControllerEnlines_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusBusControllerEnlinesResponse" message="tns:IBioConnectAPI_GetDigitusBusControllerEnlines_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusBusControllerEnlinesBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetDigitusBusControllerEnlines_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDigitusBusControllerNodeDevices">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusBusControllerNodeDevices" message="tns:IBioConnectAPI_GetDigitusBusControllerNodeDevices_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusBusControllerNodeDevicesResponse" message="tns:IBioConnectAPI_GetDigitusBusControllerNodeDevices_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusBusControllerNodeDevicesBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetDigitusBusControllerNodeDevices_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDigitusSentryControllerDevices">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusSentryControllerDevices" message="tns:IBioConnectAPI_GetDigitusSentryControllerDevices_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusSentryControllerDevicesResponse" message="tns:IBioConnectAPI_GetDigitusSentryControllerDevices_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusSentryControllerDevicesBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetDigitusSentryControllerDevices_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDigitusDevices">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetAllDigitusDevices" message="tns:IBioConnectAPI_GetAllDigitusDevices_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetAllDigitusDevicesResponse" message="tns:IBioConnectAPI_GetAllDigitusDevices_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetAllDigitusDevicesBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetAllDigitusDevices_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDigitusTimeBands">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusTimeBands" message="tns:IBioConnectAPI_GetDigitusTimeBands_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusTimeBandsResponse" message="tns:IBioConnectAPI_GetDigitusTimeBands_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusTimeBandsBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetDigitusTimeBands_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDigitusAccessScheduleList">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusAccessScheduleList" message="tns:IBioConnectAPI_GetDigitusAccessScheduleList_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusAccessScheduleListResponse" message="tns:IBioConnectAPI_GetDigitusAccessScheduleList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusAccessScheduleListBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetDigitusAccessScheduleList_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDigitusAccessSchedulesOnly">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusAccessSchedulesOnly" message="tns:IBioConnectAPI_GetDigitusAccessSchedulesOnly_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusAccessSchedulesOnlyResponse" message="tns:IBioConnectAPI_GetDigitusAccessSchedulesOnly_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetDigitusAccessSchedulesOnlyBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetDigitusAccessSchedulesOnly_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestDigitusEvents">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetLatestDigitusEvents" message="tns:IBioConnectAPI_GetLatestDigitusEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetLatestDigitusEventsResponse" message="tns:IBioConnectAPI_GetLatestDigitusEvents_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetLatestDigitusEventsBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetLatestDigitusEvents_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestDigitusAlarms">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetLatestDigitusAlarms" message="tns:IBioConnectAPI_GetLatestDigitusAlarms_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetLatestDigitusAlarmsResponse" message="tns:IBioConnectAPI_GetLatestDigitusAlarms_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetLatestDigitusAlarmsBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetLatestDigitusAlarms_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AcknowledgeDigitusAlarm">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/AcknowledgeDigitusAlarm" message="tns:IBioConnectAPI_AcknowledgeDigitusAlarm_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/AcknowledgeDigitusAlarmResponse" message="tns:IBioConnectAPI_AcknowledgeDigitusAlarm_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/AcknowledgeDigitusAlarmBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_AcknowledgeDigitusAlarm_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDigitusConnectionInfo">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveDigitusConnectionInfo" message="tns:IBioConnectAPI_SaveDigitusConnectionInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveDigitusConnectionInfoResponse" message="tns:IBioConnectAPI_SaveDigitusConnectionInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveDigitusConnectionInfoBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_SaveDigitusConnectionInfo_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDigitusConnectionInfo">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DeleteDigitusConnectionInfo" message="tns:IBioConnectAPI_DeleteDigitusConnectionInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DeleteDigitusConnectionInfoResponse" message="tns:IBioConnectAPI_DeleteDigitusConnectionInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DeleteDigitusConnectionInfoBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_DeleteDigitusConnectionInfo_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFaceEnrollment">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DeleteFaceEnrollment" message="tns:IBioConnectAPI_DeleteFaceEnrollment_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DeleteFaceEnrollmentResponse" message="tns:IBioConnectAPI_DeleteFaceEnrollment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/DeleteFaceEnrollmentBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_DeleteFaceEnrollment_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUsername">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/CheckUsername" message="tns:IBioConnectAPI_CheckUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/CheckUsernameResponse" message="tns:IBioConnectAPI_CheckUsername_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/CheckUsernameBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_CheckUsername_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDigitusDevice">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateDigitusDevice" message="tns:IBioConnectAPI_UpdateDigitusDevice_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateDigitusDeviceResponse" message="tns:IBioConnectAPI_UpdateDigitusDevice_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateDigitusDeviceBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_UpdateDigitusDevice_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDigitusEnline">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateDigitusEnline" message="tns:IBioConnectAPI_UpdateDigitusEnline_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateDigitusEnlineResponse" message="tns:IBioConnectAPI_UpdateDigitusEnline_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateDigitusEnlineBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_UpdateDigitusEnline_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDigitusController">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateDigitusController" message="tns:IBioConnectAPI_UpdateDigitusController_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateDigitusControllerResponse" message="tns:IBioConnectAPI_UpdateDigitusController_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateDigitusControllerBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_UpdateDigitusController_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDigitusControllerNode">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateDigitusControllerNode" message="tns:IBioConnectAPI_UpdateDigitusControllerNode_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateDigitusControllerNodeResponse" message="tns:IBioConnectAPI_UpdateDigitusControllerNode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateDigitusControllerNodeBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_UpdateDigitusControllerNode_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDigitusTimeband">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateDigitusTimeband" message="tns:IBioConnectAPI_UpdateDigitusTimeband_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateDigitusTimebandResponse" message="tns:IBioConnectAPI_UpdateDigitusTimeband_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateDigitusTimebandBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_UpdateDigitusTimeband_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDigitusDeviceScheduleGroup">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateDigitusDeviceScheduleGroup" message="tns:IBioConnectAPI_UpdateDigitusDeviceScheduleGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateDigitusDeviceScheduleGroupResponse" message="tns:IBioConnectAPI_UpdateDigitusDeviceScheduleGroup_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/UpdateDigitusDeviceScheduleGroupBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_UpdateDigitusDeviceScheduleGroup_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserProperties">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveUserProperties" message="tns:IBioConnectAPI_SaveUserProperties_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveUserPropertiesResponse" message="tns:IBioConnectAPI_SaveUserProperties_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/SaveUserPropertiesBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_SaveUserProperties_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProperty">
+      <wsdl:input wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetUserProperty" message="tns:IBioConnectAPI_GetUserProperty_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetUserPropertyResponse" message="tns:IBioConnectAPI_GetUserProperty_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.BioConnect.com/IBioConnectAPI/GetUserPropertyBioConnectExceptionFault" name="BioConnectExceptionFault" message="tns:IBioConnectAPI_GetUserProperty_BioConnectExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

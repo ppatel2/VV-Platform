@@ -1,0 +1,38 @@
+{
+  "name": "VV.Web.IIS",
+  "homepage": "https://github.com/ppatel2/VV-Platform",
+  "authors": [
+    "Pritesh Patel <pritesh93@hotmail.com>"
+  ],
+  "description": "VenueVision NexGen Platform",
+  "main": [
+    "assests/css/sb-admin-2.css",
+    "assests/js/sb-admin-2.js"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.5",
+    "jquery": "~2.1.4",
+    "datatables-plugins": "~1.10.10",
+    "Flot": "flot#~0.8.3",
+    "font-awesome": "4.4.0",
+    "holderjs": "2.8.2",
+    "metisMenu": "~2.2.0",
+    "datatables-responsive": "~2.0.0",
+    "bootstrap-social": "~4.11.0",
+    "flot.tooltip": "~0.8.5",
+    "DataTables": "~1.10.10",
+    "morrisjs": "~0.5.1"
+  },
+  "resolutions": {
+    "font-awesome": "~4.5"
+  }
+}
