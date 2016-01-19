@@ -453,6 +453,21 @@ namespace VV.Web.DataAccess
             }
         }
 
+        public List<Messages> GetMessages(string userName, int limitOfMessages)
+        {
+            var listOfMessages = new List<Messages>();
+            using (SqlConnection connection = this.GetConnection())
+            {
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = string.Format("SELECT TOP {0} From, RecievedAt, ";
+                    command.Parameters.AddWithValue("@ExternalID", externalID);
+                    user = fillUserDataObj(command);
+                }
+            }
+            return user;
+        }
+
         public static string EncryptString(string plainText)
         {
             try

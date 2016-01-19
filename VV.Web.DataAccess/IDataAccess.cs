@@ -28,5 +28,6 @@ namespace VV.Web.DataAccess
         void UpdateCard(CardDataObject cardDO);
 
         void DeleteCardByExternalID(string externalID);
+        List<Messages> GetMessages(string userName, int numOfRecords);
     }
 }

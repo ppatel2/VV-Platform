@@ -727,7 +727,6 @@
     <Content Include="pages\grid.html" />
     <Content Include="pages\icons.html" />
     <Content Include="pages\index.html" />
-    <Content Include="pages\login.html" />
     <Content Include="pages\morris.html" />
     <Content Include="pages\notifications.html" />
     <Content Include="pages\panels-wells.html" />

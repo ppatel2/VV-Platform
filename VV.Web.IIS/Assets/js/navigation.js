@@ -9,7 +9,7 @@ function initMenuAjax() {
         console.log(targetLink);
         if (targetLink != undefined) {
              $.get(targetLink, function (data) {
-                  $("#pageContentWrapper").html(data);
+                 $("#page-wrapper").html(data);
                   console.log(data);
              });
         } else {

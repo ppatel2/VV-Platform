@@ -26,7 +26,8 @@ namespace VV.DataObjects
                set;
           }
 
-          public BitmapImage Logo 
+        public string LogoType { get; set; }
+          public byte[] Logo 
           { 
                get; 
                set; 

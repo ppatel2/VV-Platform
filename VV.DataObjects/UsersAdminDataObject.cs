@@ -8,14 +8,13 @@ using System.Windows.Media.Imaging;
 namespace VV.DataObjects
 {
     public class UsersAdminDataObject
-     {
-          public int Id   {  get;  set;   }
-  
-          public string DevicePassword { get; set; }
+    {
+        public int Id { get; set; }
+        public string UserName { get; set; }
+        public string HashedPassword { get; set; }
+        public string Guid { get; set; }
+        public string CookieId { get; set; }
+        public ObservableCollection<string> Claims { get; set; }
 
-           public bool IsAdministrator { get; set; }
-
-          public bool IsDeviceAdministrator { get; set;  }
-
-     }
+    }
 }

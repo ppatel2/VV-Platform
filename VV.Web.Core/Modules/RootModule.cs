@@ -1,24 +1,20 @@
-﻿using VV.Web.Core.Models;
-using Nancy;
+﻿using Nancy;
 using Nancy.Owin;
-using Nancy.ModelBinding;
-using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Web;
 using System.Threading;
 using System.Threading.Tasks;
-using System.IO;
-using Nancy.ViewEngines.Razor;
+using VV.Web.Core.Models;
 
 namespace VV.Web.Core.Modules
 {
-     public class RootModule : NancyModule
+    public class RootModule : NancyModule
      {
           public RootModule()
           {
                //   This will run as Synchronize but we can see the flags for async methodologies.
-               Get["/nan/"] = (parameters) => 
+               Get["/pages/"] = (parameters) => 
                {
                     var env = this.Context.GetOwinEnvironment();
 
@@ -47,7 +43,7 @@ namespace VV.Web.Core.Modules
                     return View["Index.cshtml", model];
                };
 
-               Post["/", true] = async (parameters, ct) =>
+               Post["/pages", true] = async (parameters, ct) =>
                {
                     string link = await GetData(ct);
                     var model = new NancyDemoModel() { Id = "test", Test = link };
