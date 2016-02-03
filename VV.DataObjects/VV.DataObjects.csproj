@@ -84,6 +84,7 @@
     <Compile Include="FinanceDataObject.cs" />
     <Compile Include="LocationDataObject.cs" />
     <Compile Include="Messages.cs" />
+    <Compile Include="PhotoDataObject.cs" />
     <Compile Include="PriceDataObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyDataObject.cs" />
@@ -93,8 +94,6 @@
     <Compile Include="User.cs" />
     <Compile Include="UserIdentity.cs" />
     <Compile Include="UsersAdminDataObject.cs" />
-    <Compile Include="UsersStubDataObject.cs" />
-    <Compile Include="UsersDataObject.cs" />
     <Compile Include="InventoryVehicleDataObject.cs" />
     <Compile Include="VehicleDataObject.cs" />
     <Compile Include="VehicleStatusDataObject.cs" />
